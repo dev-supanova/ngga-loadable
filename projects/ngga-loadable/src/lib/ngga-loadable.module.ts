@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { DefaultLoaderComponent } from './loaders/default/default-loader.component';
 
@@ -11,7 +12,9 @@ import { DefaultLoadableComponent } from './loadables/default-loadable.component
     DefaultLoaderComponent,
     LoadableComponent
   ],
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   exports: [
     DefaultLoadableComponent
   ]
