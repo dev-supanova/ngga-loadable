@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 
 import { DefaultLoaderComponent } from './loaders/default/default-loader.component';
 
@@ -13,10 +11,7 @@ import { DefaultLoadableComponent } from './loadables/default-loadable.component
     DefaultLoaderComponent,
     LoadableComponent
   ],
-  imports: [
-    BrowserModule,
-    CommonModule
-  ],
+  imports: [],
   exports: [
     DefaultLoadableComponent
   ]
