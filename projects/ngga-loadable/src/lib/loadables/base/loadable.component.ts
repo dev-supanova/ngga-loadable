@@ -11,7 +11,7 @@ export class LoadableComponent implements OnChanges {
         return this._loading;
     }
 
-    @Input('loadng')
+    @Input('loading')
     set loading(val: boolean) {
         this._loading = val;
     }
