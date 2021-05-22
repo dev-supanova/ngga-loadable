@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngga-loadable": {
+      "projectType": "library",
+      "root": "projects/ngga-loadable",
+      "sourceRoot": "projects/ngga-loadable/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngga-loadable/tsconfig.lib.json",
+            "project": "projects/ngga-loadable/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngga-loadable/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngga-loadable/src/test.ts",
+            "tsConfig": "projects/ngga-loadable/tsconfig.spec.json",
+            "karmaConfig": "projects/ngga-loadable/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngga-loadable/tsconfig.lib.json",
+              "projects/ngga-loadable/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngga-loadable"
 }
