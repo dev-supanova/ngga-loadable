@@ -10,7 +10,7 @@ import { LoadableComponent } from './base/loadable.component';
             <ng-content></ng-content>
         </div>
 
-        <div class="loader" **ngIf="showLoading === true">
+        <div class="loader" *ngIf="showLoading === true">
             <ngga-loader></ngga-loader>
         </div>
     </div>
