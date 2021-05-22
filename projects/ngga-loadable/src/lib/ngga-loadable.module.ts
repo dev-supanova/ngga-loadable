@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
-import { NggaLoadableComponent } from './ngga-loadable.component';
 
-import { DefaultLoaderComponent } from './loaders';
+import { DefaultLoaderComponent } from './loaders/default/default-loader.component';
 
 import { LoadableComponent } from './loadables/base/loadable.component';
-import { DefaultLoadableComponent } from './loadables';
+import { DefaultLoadableComponent } from './loadables/default-loadable.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
-    NggaLoadableComponent,
+    DefaultLoadableComponent,
     DefaultLoaderComponent,
-    LoadableComponent,
-    DefaultLoadableComponent
+    LoadableComponent
   ],
-  imports: [],
+  imports: [
+    BrowserModule
+  ],
   exports: [
     DefaultLoadableComponent
   ]
