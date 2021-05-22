@@ -1,6 +1,19 @@
 {
   "name": "ngga-loadable",
   "version": "0.1.2",
+  "description": "Loading component for angular applications",
+  "keywords": [
+    "loading", "loadable", "angular", "load", "spinner"
+  ],
+  "homepage": "https://github.com/dev-supanova/ngga-loadable#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Alec Agisanyang"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-supanova/ngga-loadable"
+  },
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9"
