@@ -1,1 +1,1 @@
-export * from './base/loadable.component';
+export * from './default-loadable.component';

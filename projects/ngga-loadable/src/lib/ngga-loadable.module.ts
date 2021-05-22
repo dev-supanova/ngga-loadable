@@ -3,14 +3,19 @@ import { NggaLoadableComponent } from './ngga-loadable.component';
 
 import { DefaultLoaderComponent } from './loaders';
 
-import { LoadableComponent } from './loadables';
+import { LoadableComponent } from './loadables/base/loadable.component';
+import { DefaultLoadableComponent } from './loadables';
 
 @NgModule({
   declarations: [
     NggaLoadableComponent,
-    DefaultLoaderComponent
+    DefaultLoaderComponent,
+    LoadableComponent,
+    DefaultLoadableComponent
   ],
   imports: [],
-  exports: [NggaLoadableComponent]
+  exports: [
+    DefaultLoadableComponent
+  ]
 })
 export class NggaLoadableModule { }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'gga-default-loader',
+    selector: 'ngga-loader',
     template: `
     <div class="loader-container">
         <div class="default-loader">
