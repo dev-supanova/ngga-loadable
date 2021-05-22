@@ -1,27 +1,58 @@
-# LoadableWorkspace
+# NggaLoadable
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+Component that can show a loading spinner for angular applications
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+npm install ngga-loadable --save
+```
 
-## Code scaffolding
+## Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Step 1:** Install library
 
-## Build
+```bash
+npm i ngga-loadable --save
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+**Step: 2:** Import NggaLoadableModule to your app NgModule
 
-## Running unit tests
+```typescript
+import { CommonModule } from '@angular/common';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { NggaLoadableModule } from 'ngga-loadable';
 
-## Running end-to-end tests
+@NgModule({
+  imports: [
+  CommonModule,
+    NggaLoadableModule    // <--- Import NggaLoadableModule
+  ]
+})
+export class AppModule { }
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Use
 
-## Further help
+```typescript
+import { Component } from '@angular/core';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@Component({
+  template: `
+    <ngga-loadable [loading]="loading">
+      <div>
+        <!-- Content Here -->
+      </div>
+    </ngga-loadable>
+  `
+})
+export class MyComponent {
+  loading: boolean = false;
+}
+```
+
+## Licennse
+
+MIT
+
+___

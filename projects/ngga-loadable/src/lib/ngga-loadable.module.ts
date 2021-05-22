@@ -5,6 +5,7 @@ import { DefaultLoaderComponent } from './loaders/default/default-loader.compone
 
 import { LoadableComponent } from './loadables/base/loadable.component';
 import { DefaultLoadableComponent } from './loadables/default-loadable.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
